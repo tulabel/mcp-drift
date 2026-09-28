@@ -2,6 +2,8 @@ cff-version: 1.2.0
 message: "If you use these results, please cite them as below."
 title: "Tulabel mcp-drift: aggregate change measurements of the MCP Registry"
 type: dataset
+version: "0.1.0"
+date-released: "2026-09-28"
 authors:
   - name: Tulabel
 license: CC-BY-4.0

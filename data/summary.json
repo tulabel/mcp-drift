@@ -1,0 +1,160 @@
+{
+  "license": "SPDX-License-Identifier: CC-BY-4.0 · Copyright (c) 2026 Tulabel",
+  "source": "official MCP Registry public API (registry.modelcontextprotocol.io/v0.1/servers) and npm registry /latest; aggregates only",
+  "snapshot": "20260928T070125717Z",
+  "snapshotAt": "2026-09-28T07:59:38.071Z",
+  "entries": 123157,
+  "servers": 36830,
+  "bulkDays": [],
+  "d1": {
+    "all": {
+      "k": 3952,
+      "n": 13910,
+      "rate": 0.284112,
+      "lo": 0.276678,
+      "hi": 0.291666
+    },
+    "remote": {
+      "k": 1707,
+      "n": 5768,
+      "rate": 0.295943,
+      "lo": 0.284302,
+      "hi": 0.307856
+    },
+    "package": {
+      "k": 2226,
+      "n": 7887,
+      "rate": 0.282237,
+      "lo": 0.272411,
+      "hi": 0.292274
+    },
+    "medianGapDays": 0.679,
+    "gapCount": 86327,
+    "gapServers": 15398
+  },
+  "d1ExcludingBulk": {
+    "all": {
+      "k": 3952,
+      "n": 13910,
+      "rate": 0.284112,
+      "lo": 0.276678,
+      "hi": 0.291666
+    },
+    "remote": {
+      "k": 1707,
+      "n": 5768,
+      "rate": 0.295943,
+      "lo": 0.284302,
+      "hi": 0.307856
+    },
+    "package": {
+      "k": 2226,
+      "n": 7887,
+      "rate": 0.282237,
+      "lo": 0.272411,
+      "hi": 0.292274
+    },
+    "medianGapDays": 0.679,
+    "gapCount": 86327,
+    "gapServers": 15398
+  },
+  "d2": {
+    "any": {
+      "k": 7804,
+      "n": 15398,
+      "rate": 0.506819,
+      "lo": 0.498922,
+      "hi": 0.514713
+    },
+    "anyExceptDescription": {
+      "k": 3575,
+      "n": 15398,
+      "rate": 0.232173,
+      "lo": 0.225571,
+      "hi": 0.238908
+    },
+    "byField": {
+      "description": 5659,
+      "packageIds": 1759,
+      "requiredEnv": 503,
+      "secretEnv": 603,
+      "remoteUrls": 1592
+    }
+  },
+  "d3": {
+    "servers": 36830,
+    "repositoryUrl": {
+      "k": 28014,
+      "n": 36830,
+      "rate": 0.76063,
+      "lo": 0.756245,
+      "hi": 0.76496
+    },
+    "transport": {
+      "k": 36380,
+      "n": 36830,
+      "rate": 0.987782,
+      "lo": 0.986608,
+      "hi": 0.988854
+    },
+    "secretDeclared": {
+      "k": 2262,
+      "n": 15566,
+      "rate": 0.145317,
+      "lo": 0.139868,
+      "hi": 0.150941
+    },
+    "secretDeclaredAmongEnv": {
+      "k": 2262,
+      "n": 7592,
+      "rate": 0.297945,
+      "lo": 0.287762,
+      "hi": 0.308333
+    },
+    "remoteEndpoint": {
+      "k": 20814,
+      "n": 20814,
+      "rate": 1,
+      "lo": 0.999815,
+      "hi": 1
+    },
+    "namespaceGithub": {
+      "k": 24548,
+      "n": 36830,
+      "rate": 0.666522,
+      "lo": 0.66169,
+      "hi": 0.671319
+    },
+    "kinds": {
+      "package": 15566,
+      "remote": 20814,
+      "none": 450
+    }
+  },
+  "d4": {
+    "mismatch": {
+      "k": 1017,
+      "n": 2982,
+      "rate": 0.341046,
+      "lo": 0.324246,
+      "hi": 0.358256
+    },
+    "direction": {
+      "registryLower": 997,
+      "registryHigher": 5,
+      "incomparable": 15
+    },
+    "fetched": 3000,
+    "failed": 18,
+    "failedScoped": 11,
+    "noRegistryVersion": 0
+  },
+  "registryTypes": {
+    "cargo": 63,
+    "mcpb": 1362,
+    "npm": 10321,
+    "nuget": 131,
+    "oci": 1011,
+    "pypi": 4041
+  }
+}
