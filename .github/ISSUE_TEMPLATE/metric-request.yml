@@ -1,0 +1,26 @@
+name: Metric request
+description: Suggest another aggregate measurement of the MCP registry.
+title: "[metric] "
+labels: ["topic:metric"]
+body:
+  - type: markdown
+    attributes:
+      value: "**This is a public issue. Do not include confidential information, personal data or contact details.** Results are published as aggregates only; we do not publish or discuss results for individual servers or packages. / 공개 이슈입니다. 기밀·개인정보·연락처를 적지 마세요. 결과는 집계로만 공개하며, 개별 서버·패키지 결과는 공개하거나 논의하지 않습니다. Requests are counted to decide what to measure next. There is no promise of a reply or schedule. / 요청은 다음 측정 대상을 정하는 데 집계하며, 응답·일정을 약속하지 않습니다."
+  - type: dropdown
+    id: requester
+    attributes:
+      label: Requester type / 요청자 유형
+      options:
+        - MCP server developer / MCP 서버 개발자
+        - Client or platform team / 클라이언트·플랫폼 팀
+        - Security or compliance / 보안·컴플라이언스
+        - Research / 연구
+        - Other / 기타
+    validations:
+      required: true
+  - type: textarea
+    id: metric
+    attributes:
+      label: What should be measured, in aggregate? / 무엇을 집계로 재면 좋을까요?
+    validations:
+      required: true

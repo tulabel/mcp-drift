@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use these results, please cite them as below."
+title: "Tulabel mcp-drift: aggregate change measurements of the MCP Registry"
+type: dataset
+authors:
+  - name: Tulabel
+license: CC-BY-4.0
+repository-code: "https://github.com/tulabel/mcp-drift"
+keywords:
+  - mcp
+  - model context protocol
+  - registry
+  - supply chain

@@ -1,0 +1,20 @@
+name: Data correction
+description: Report an aggregate number or statement that looks wrong.
+labels: ["topic:correction"]
+body:
+  - type: markdown
+    attributes:
+      value: "**This is a public issue. Do not include confidential information, personal data or contact details.** Results are published as aggregates only; we do not publish or discuss results for individual servers or packages. / 공개 이슈입니다. 기밀·개인정보·연락처를 적지 마세요. 결과는 집계로만 공개하며, 개별 서버·패키지 결과는 공개하거나 논의하지 않습니다. Please describe the problem at the level of the published tables; do not name servers or packages. / 공개된 표 수준에서 설명해 주세요. 서버·패키지 이름은 적지 마세요."
+  - type: input
+    id: where
+    attributes:
+      label: File and metric / 파일과 지표
+      placeholder: "e.g. data/summary.json, D2"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What looks wrong and why / 무엇이 왜 틀려 보이나요
+    validations:
+      required: true

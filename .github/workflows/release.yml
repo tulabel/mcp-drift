@@ -1,0 +1,35 @@
+name: release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Verify data hashes
+        run: cd data && sha256sum -c summary.json.sha256
+      - name: Release notes for this tag
+        run: awk -v t="## $GITHUB_REF_NAME " 'index($0, t) == 1 {f = 1; next} /^## / {f = 0} f' CHANGELOG.md > "$RUNNER_TEMP/notes.md" && test -s "$RUNNER_TEMP/notes.md"
+      - name: Create release
+        run: gh release create "$GITHUB_REF_NAME" data/summary.json data/summary.json.sha256 drift-public.md --title "$GITHUB_REF_NAME" --notes-file "$RUNNER_TEMP/notes.md" --verify-tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+  labels:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Ensure issue-form labels exist
+        run: |
+          gh label create "topic:question" --repo "$GITHUB_REPOSITORY" --color 5319e7 --description "Question about method or metrics" --force
+          gh label create "topic:correction" --repo "$GITHUB_REPOSITORY" --color d93f0b --description "Aggregate data correction" --force
+          gh label create "topic:metric" --repo "$GITHUB_REPOSITORY" --color 1d76db --description "Metric request" --force
+        env:
+          GH_TOKEN: ${{ github.token }}
